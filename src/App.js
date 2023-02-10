@@ -1,29 +1,18 @@
 import './App.css';
 import MainPage from "./components/MainPage";
+import Anekdot from "./components/Anekdot";
+import {Routes, Route} from "react-router-dom";
 
 function App() {
-  const element = "whouser"
-  return (
-    <div className="App">
-        <MainPage/>
-      {/*<Header />*/}
-      {/*<header className="App-header">*/}
-      {/*  <img src={logo} className="App-logo" alt="logo" />*/}
-      {/*  <p>Welcome, {element}</p>*/}
-      {/*  <p>*/}
-      {/*    Edit <code>src/App.js</code> and save to reload.*/}
-      {/*  </p>*/}
-      {/*  <a*/}
-      {/*    className="App-link"*/}
-      {/*    href="https://reactjs.org"*/}
-      {/*    target="_blank"*/}
-      {/*    rel="noopener noreferrer"*/}
-      {/*  >*/}
-      {/*    Learn React*/}
-      {/*  </a>*/}
-      {/*</header>*/}
-    </div>
-  );
+    return (
+        // <MainPage/>
+        <Routes>
+            <Route exact path="/" element={<MainPage/>}/>
+            <Route exact path="/anek/fish" element={<Anekdot theme="Рыбалка"/>}/>
+            <Route exact path="/anek/shtirlits" element={<Anekdot theme="Штирлиц"/>}/>
+            <Route exact path="/anek/narik" element={<Anekdot theme="Наркоманы"/>}/>
+        </Routes>
+    );
 }
 
 export default App;
