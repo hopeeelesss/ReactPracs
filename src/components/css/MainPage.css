@@ -1,0 +1,11 @@
+.mainPageLogoPart{
+    background: #006400;
+    color: snow;
+}
+
+.mainPageTextPart{
+    text-align: center;
+    margin: 150px;
+    color: #006400;
+    font-size: calc(10px + 2vmin);
+}
